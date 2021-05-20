@@ -1,13 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularAss1</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-  <app-root></app-root>
+
+<p>Click the button to return the index of the first element in the array 2,3,10,15,26,35,50,63 </p>
+<p>type: <input type="number" id="seriesToCheck" value="number"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p>Index: <span id="demo"></span></p>
+
+
+<script>
+var series = [2,3,10,15,26,35,50,63];
+
+function checkArray(series) {
+  return series >= document.getElementById("seriesToCheck").value;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = series.findIndex(checkArray);
+}
+</script>
+
 </body>
 </html>
